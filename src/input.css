@@ -1,0 +1,275 @@
+/* Poppins Medium */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Default Font */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@import 'tailwindcss';
+
+/* ================================================
+   MEDORA HOSPITAL
+   Tailwind CSS v4
+   Custom Color System
+   Light & Dark Theme
+================================================ */
+
+/* ================================================
+   01. LIGHT THEME - تم روشن
+   رنگ‌های پیش‌فرض وب‌سایت
+================================================ */
+
+@theme {
+  /* ---------- Background Colors ---------- */
+
+  /* پس‌زمینه اصلی کل وب‌سایت */
+  --color-background: #f8fafc;
+
+  /* پس‌زمینه سکشن‌ها و بخش‌های مختلف */
+  --color-section: #f1f5f9;
+
+  /* پس‌زمینه کارت‌ها و باکس‌ها */
+  --color-box: #ffffff;
+
+  /* پس‌زمینه Footer */
+  --color-footer: #e2e8f0;
+
+  /* ---------- Primary & Accent Colors ---------- */
+
+  /* رنگ اصلی برند و عناصر مهم */
+  --color-primary: #2563eb;
+
+  /* رنگ اصلی هنگام Hover */
+  --color-primary-hover: #1d4ed8;
+
+  /* رنگ تأکیدی برای جزئیات پزشکی */
+  --color-accent: #14b8a6;
+
+  /* ---------- Text Colors ---------- */
+
+  /* رنگ متن اصلی و عنوان‌ها */
+  --color-text-main: #0f172a;
+
+  /* رنگ متن فرعی و توضیحات */
+  --color-text-secondary: #64748b;
+
+  /* ---------- Link Colors ---------- */
+
+  /* رنگ لینک‌ها */
+  --color-link: #2563eb;
+
+  /* رنگ لینک هنگام Hover */
+  --color-link-hover: #1d4ed8;
+
+  /* ---------- Icon Colors ---------- */
+
+  /* رنگ آیکون‌های وب‌سایت */
+  --color-icon: #475569;
+
+  /* بکراند آیکون */
+  --color-bg-icon: #a5b4c8;
+
+  /* ---------- Button Colors ---------- */
+
+  /* رنگ پس‌زمینه دکمه‌ها */
+  --color-button: #2563eb;
+
+  /* رنگ دکمه هنگام Hover */
+  --color-button-hover: #1d4ed8;
+
+  /* ---------- Input Colors ---------- */
+
+  /* پس‌زمینه فیلدهای ورودی */
+  --color-input: #ffffff;
+
+  /* رنگ Border فیلدهای ورودی */
+  --color-input-border: #cbd5e1;
+
+  /* رنگ Border هنگام Focus */
+  --color-input-focus: #2563eb;
+
+  /* ---------- Border Colors ---------- */
+
+  /* رنگ Border کارت‌ها و باکس‌ها */
+  --color-box-border: #e2e8f0;
+
+  /* ---------- Navbar Colors ---------- */
+
+  /* پس‌زمینه نوار ناوبری */
+  --color-navbar: rgba(255, 255, 255, 0.1);
+
+  /* ---------- Overlay Colors ---------- */
+
+  /* لایه تیره روی تصاویر Hero */
+  --color-hero-overlay: rgb(15 23 42 / 45%);
+
+  /* ---------- Box Shadow ---------- */
+
+  /* سایه پیش‌فرض کارت‌ها و باکس‌ها */
+  --shadow-box: 0 4px 20px rgb(15 23 42 / 6%);
+
+  /* ---------- Aside Colors ---------- */
+  --color-aside: #ffffff;
+
+  /* ---------- Dark Mode Toggle ---------- */
+
+  /* رنگ پس‌زمینه دکمه در حالت روشن */
+  --color-toggle-track: #cbd5e1;
+
+  /* رنگ دایره دکمه در حالت روشن */
+  --color-toggle-thumb: #ffffff;
+}
+
+/* ================================================
+   02. DARK THEME - تم تاریک
+   تغییر رنگ‌ها هنگام فعال شدن کلاس dark
+================================================ */
+
+.dark {
+  /* فعال کردن رنگ‌بندی مناسب مرورگر در حالت تاریک */
+  color-scheme: dark;
+
+  /* ---------- Background Colors ---------- */
+
+  /* پس‌زمینه اصلی کل وب‌سایت */
+  --color-background: #0b1220;
+
+  /* پس‌زمینه سکشن‌ها */
+  --color-section: #111c2e;
+
+  /* پس‌زمینه کارت‌ها و باکس‌ها */
+  --color-box: #172338;
+
+  /* پس‌زمینه Footer */
+  --color-footer: #070d18;
+
+  /* ---------- Primary & Accent Colors ---------- */
+
+  /* رنگ اصلی برند */
+  --color-primary: #60a5fa;
+
+  /* رنگ اصلی هنگام Hover */
+  --color-primary-hover: #3b82f6;
+
+  /* رنگ تأکیدی پزشکی */
+  --color-accent: #2dd4bf;
+
+  /* ---------- Text Colors ---------- */
+
+  /* رنگ متن اصلی و عنوان‌ها */
+  --color-text-main: #f8fafc;
+
+  /* رنگ متن فرعی و توضیحات */
+  --color-text-secondary: #94a3b8;
+
+  /* ---------- Link Colors ---------- */
+
+  /* رنگ لینک‌ها */
+  --color-link: #60a5fa;
+
+  /* رنگ لینک هنگام Hover */
+  --color-link-hover: #93c5fd;
+
+  /* ---------- Icon Colors ---------- */
+
+  /* رنگ آیکون ها*/
+  --color-icon: #475569;
+
+  /* رنگ بکراند آیکون ها */
+  --color-bg-icon: #a5b4c8;
+
+  /* ---------- Button Colors ---------- */
+
+  /* رنگ پس‌زمینه دکمه‌ها */
+  --color-button: #3b82f6;
+
+  /* رنگ دکمه هنگام Hover */
+  --color-button-hover: #2563eb;
+
+  /* ---------- Input Colors ---------- */
+
+  /* پس‌زمینه Input */
+  --color-input: #111c2e;
+
+  /* رنگ Border Input */
+  --color-input-border: #334155;
+
+  /* رنگ Border هنگام Focus */
+  --color-input-focus: #60a5fa;
+
+  /* ---------- Border Colors ---------- */
+
+  /* رنگ Border کارت‌ها و باکس‌ها */
+  --color-box-border: #26364d;
+
+  /* ---------- Navbar Colors ---------- */
+
+  /* پس‌زمینه Navbar */
+  --color-navbar: rgba(17, 28, 46, 0.1);
+
+  /* ---------- Overlay Colors ---------- */
+
+  /* لایه تیره روی تصاویر Hero */
+  --color-hero-overlay: rgb(2 6 23 / 70%);
+
+  /* ---------- Box Shadow ---------- */
+
+  /* سایه کارت‌ها در حالت تاریک */
+  --shadow-box: 0 4px 24px rgb(0 0 0 / 25%);
+
+  /* ---------- Aside Colors ---------- */
+  --color-aside: #111c2e;
+
+  /* ---------- Dark Mode Toggle ---------- */
+
+  /* رنگ پس‌زمینه دکمه در حالت تاریک */
+  --color-toggle-track: #2563eb;
+
+  /* رنگ دایره دکمه در حالت تاریک */
+  --color-toggle-thumb: #ffffff;
+}
+
+/* ================================================
+   03. DARK MODE CONFIGURATION
+   فعال‌سازی Dark Mode با کلاس dark
+================================================ */
+
+/* 
+   با اضافه کردن کلاس dark به html،
+   رنگ‌های تعریف‌شده در بخش Dark Theme فعال می‌شوند.
+*/
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================================
+   04. CUSTOM CONTAINER
+   تنظیمات اختصاصی Container
+================================================ */
+
+/*
+   استفاده از کلاس container:
+   وسط‌چین کردن محتوا و ایجاد فاصله افقی
+*/
+
+/* Old Container */
+/* @utility container {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 4px;
+} */
+
+@utility container {
+  margin-inline: auto;
+  padding: 4px;
+}
+
+/* ==========================================
+   3. FONT & GLOBAL STYLES
+   ========================================== */

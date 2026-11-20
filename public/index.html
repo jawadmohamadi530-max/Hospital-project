@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEDORA HOSPITAL</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-background overflow-x-hidden">
+    <!-- header -->
+    <header
+      class="w-screen h-screen relative bg-[url('../images/header-image.png')] bg-fixed bg-cover bg-center bg-no-repeat"
+      id="home"
+    >
+      <nav class="w-full h-12.5 bg-navbar absolute z-30">
+        <div class="container flex w-full h-full justify-around">
+          <div class="h-full w-30">
+            <img
+              src="images/text-logo.png"
+              alt="MEDORA HOSPITAL LOGO"
+              class="h-full w-full cursor-pointer"
+            />
+          </div>
+          <div class="flex items-center">
+            <ul class="flex gap-x-2.5 max-md:hidden">
+              <li>
+                <a href="#home" class="text-accent hover:underline">Home</a>
+              </li>
+              <li>
+                <a href="#our-services" class="text-accent hover:underline"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#our-doctors" class="text-accent hover:underline"
+                  >Our Doctors</a
+                >
+              </li>
+              <li>
+                <a href="#about-us" class="text-accent hover:underline"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact-us" class="text-accent hover:underline"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="h-full flex items-center">
+            <span class="max-md:hidden">
+              <a href="#">
+                <i class="fa fa-sign-in fa-2xl text-accent"></i>
+              </a>
+            </span>
+          </div>
+          <div
+            class="w-10 h-5 p-1 bg-toggle-track self-center rounded-3xl flex items-center justify-start transition-all duration-500 ease-in max-md:hidden"
+            id="dark-mode-btn"
+          >
+            <div
+              class="w-4 h-4 bg-toggle-thumb rounded-full"
+              id="dark-mode-btn__thamd"
+            ></div>
+          </div>
+          <span class="md:hidden self-center">
+            <i class="fa fa-bars text-2xl text-accent"></i>
+          </span>
+          <div
+            class="w-40 h-screen fixed top-0 left-0 bg-aside pl-2.5 -translate-x-full transition-transform ease-in duration-500 delay-200"
+            id="aside"
+          >
+            <ul class="md:hidden">
+              <li>
+                <a
+                  href="#home"
+                  class="text-link block mt-10 transition hover:text-link-hover hover:underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#our-services"
+                  class="text-link block mt-2.5 transition hover:text-link-hover hover:underline"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#our-doctors"
+                  class="text-link block mt-2.5 transition hover:text-link-hover hover:underline"
+                  >Our Doctors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about-us"
+                  class="text-link block mt-2.5 transition hover:text-link-hover hover:underline"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact-us"
+                  class="text-link block mt-2.5 transition hover:text-link-hover hover:underline"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact-us"
+                  class="text-link block mt-2.5 mb-10 transition hover:text-link-hover hover:underline"
+                >
+                  sogin in
+                  <i class="fa fa-sign-in fa-1xl text-link"></i>
+                </a>
+              </li>
+              <div class="w-full flex items-center gap-1">
+                <p class="mt-2 text-text-main" id="light-mode">Light</p>
+                <div
+                  class="w-10 h-5 p-1 bg-toggle-track self-center rounded-3xl flex items-center justify-start transition-all duration-500 ease-in mt-2.5"
+                  id="dark-mode-btn2"
+                >
+                  <div
+                    class="w-4 h-4 bg-toggle-thumb rounded-full"
+                    id="dark-mode-btn__thamd2"
+                  ></div>
+                </div>
+                <p class="mt-2 text-text-secondary" id="dark-mode">Dark</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="w-screen h-screen fixed z-10 bg-hero-overlay hidden"
+        id="overlay"
+      ></div>
+      <div
+        class="h-screen w-screen bg-hero-overlay flex justify-center items-center"
+      >
+        <div class="max-w-125">
+          <h1 class="text-center text-text-main text-4xl">
+            Your Health, Our Priority.
+          </h1>
+          <p class="text-center text-text-main mt-3">
+            Providing exceptional healthcare with compassion, innovation, and
+            expertise.
+          </p>
+          <button
+            class="w-full h-12.5 mt-3 rounded-2xl bg-button text-text-main transition-all duration-500 ease-in delay-200 hover:bg-button-hover cursor-pointer"
+          >
+            Book Appointment
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <section class="bg-section">
+        <div class="container flex py-5 max-md:block max-md:pt-5">
+          <!-- text box -->
+          <div
+            class="w-1/2 flex items-center justify-center max-md:mx-auto max-md:mb-5"
+          >
+            <div class="max-w-125">
+              <h1 class="text-4xl text-text-main text-center">
+                Caring For You, Every Step Of The Way.
+              </h1>
+              <p class="text-text-main text-center mt-3">
+                At MEDORA, we are dedicated to delivering high-quality
+                healthcare in a comfortable and supportive environment.
+              </p>
+              <button
+                class="w-full h-12.5 mt-3 rounded-2xl bg-button text-text-main transition-all duration-500 ease-in delay-200 hover:bg-button-hover"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <!-- image box -->
+          <div
+            class="w-1/2 flex items-center justify-center my-20 max-md:mx-auto max-md:mb-20 max-md:mt-0"
+          >
+            <img
+              src="images/01-hospital-exterior.jpg"
+              alt="image number one"
+              class="rounded-xl max-w-80 h-117"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="bg-section" id="our-services">
+        <div class="max-w-125 mx-auto text-text-main">
+          <h1 class="text-4xl text-center">Our Services</h1>
+          <h3 class="text-3xl text-center mt-3">
+            Comprehensive Healthcare Services.
+          </h3>
+          <p class="text-center mt-3">
+            Description: From routine checkups to specialized treatments, we
+            provide complete medical care for every stage of life.
+          </p>
+        </div>
+        <div class="w-full">
+          <div
+            class="container flex justify-center flex-wrap gap-2.5 mt-10 pb-10"
+          >
+            <div
+              class="w-50 p-2.5 bg-box border-box-border shadow-box rounded-xl"
+            >
+              <div class="w-full flex justify-center">
+                <i class="fa-solid fa-heart-pulse text-9xl text-accent"></i>
+              </div>
+              <h4 class="text-2xl text-text-main mt-3 font-bold">Cardiology</h4>
+              <p class="text-text-main mt-3 font-light">
+                Advanced heart care and cardiovascular treatments.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-3 mb-1 text-link transition hover:underline hover:text-link-hover"
+              >
+                Learn More
+                <i class="fa fa-arrow-left fa-solid text-accent"></i>
+              </a>
+            </div>
+            <div
+              class="w-50 p-2.5 bg-box border-box-border shadow-box rounded-xl"
+            >
+              <div class="w-full flex justify-center">
+                <i class="fa-solid fa-brain text-9xl text-accent"></i>
+              </div>
+              <h4 class="text-2xl text-text-main mt-3 font-bold">Neurology</h4>
+              <p class="text-text-main mt-3 font-light">
+                Expert care for brain and nervous system conditions.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-3 mb-1 text-link transition hover:underline hover:text-link-hover"
+              >
+                Learn More
+                <i class="fa fa-arrow-left fa-solid text-accent"></i>
+              </a>
+            </div>
+            <div
+              class="w-50 p-2.5 bg-box border-box-border shadow-box rounded-xl"
+            >
+              <div class="w-full flex justify-center">
+                <i class="fa-solid fa-baby text-9xl text-accent"></i>
+              </div>
+              <h4 class="text-2xl text-text-main mt-3 font-bold">Pediatrics</h4>
+              <p class="text-text-main mt-3 font-light">
+                Specialized healthcare for children.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-3 mb-1 text-link transition hover:underline hover:text-link-hover"
+              >
+                Learn More
+                <i class="fa fa-arrow-left fa-solid text-accent"></i>
+              </a>
+            </div>
+            <div
+              class="w-50 p-2.5 bg-box border-box-border shadow-box rounded-xl"
+            >
+              <div class="w-full flex justify-center">
+                <i class="fa-solid fa-x-ray text-9xl text-accent"></i>
+              </div>
+              <h4 class="text-2xl text-text-main mt-3 font-bold">Radiology</h4>
+              <p class="text-text-main mt-3 font-light">
+                Modern medical imaging and diagnostics.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-3 mb-1 text-link transition hover:underline hover:text-link-hover"
+              >
+                Learn More
+                <i class="fa fa-arrow-left fa-solid text-accent"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-section pb-10">
+        <div class="container flex py-3 max-md:block">
+          <div
+            class="w-1/2 flex items-center justify-center max-md:mx-auto max-md:mb-5"
+          >
+            <img
+              src="images/02-doctor.jpg"
+              alt="Image For Oue Doctors"
+              class="rounded-xl max-w-80 h-117"
+            />
+          </div>
+          <div class="w-1/2 flex items-center justify-center max-md:mx-auto">
+            <div class="w-125">
+              <h1 class="text-3xl text-text-main text-center">
+                Meet Our Experienced Doctors
+              </h1>
+              <p class="text-text-main text-center mt-3">
+                Our skilled medical professionals are committed to providing
+                personalized care and the best possible treatment.
+              </p>
+              <button
+                class="w-full h-12.5 mt-3 rounded-2xl bg-button text-text-main transition-all duration-500 ease-in delay-200 hover:bg-button-hover"
+              >
+                Meet Our Team
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="our-doctors">
+          <div class="w-full">
+            <h4
+              class="text-accent w-40 mx-auto text-center rounded-xl bg-primary-hover font-black mt-3"
+            >
+              Our Doctors
+            </h4>
+          </div>
+          <div class="flex gap-2.5 flex-wrap justify-center mt-10 pb-10">
+            <div
+              class="w-70 overflow-hidden rounded-3xl bg-box border border-solid border-box-border"
+            >
+              <img
+                src="images/01_dr_james_wilson.jpg"
+                alt="OUR DOCTORS PHOTO"
+              />
+              <h3 class="text-2xl text-center mt-2.5">Dr. James Wilson</h3>
+              <span
+                class="bg-primary text-accent w-35 block text-center rounded-xl mx-auto mt-3"
+              >
+                <i class="fa-solid fa-heart-pulse"></i>
+                Cardiology
+              </span>
+              <div class="border-b-[0.5px] w-[90%] mx-auto shadow-box">
+                <p class="text-text-main text-center mt-3 pb-2.5">
+                  Specializes in heart health and cardiovascular diseases,
+                  providing personalized care for every patient.
+                </p>
+              </div>
+              <div class="text-center mt-4">
+                <i
+                  class="fa-brands fa-linkedin-in text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-briefcase-medical text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-envelope text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+              </div>
+              <button
+                class="w-[80%] h-12.5 bg-button mb-3 mt-3 block mx-auto rounded-2xl transition-all duration-500 ease-in delay-200 hover:bg-button-hover text-text-main cursor-pointer"
+              >
+                <i class="fa-solid fa-calendar-days text-icon"></i>
+                book appointment
+              </button>
+            </div>
+
+            <div
+              class="w-70 overflow-hidden rounded-3xl bg-box border border-solid border-box-border"
+            >
+              <img
+                src="images/02_dr_sophia_miller.jpg"
+                alt="OUR DOCTORS PHOTO"
+              />
+              <h3 class="text-2xl text-center mt-2.5">Dr. Sophia Miller</h3>
+              <span
+                class="bg-primary text-accent w-35 block text-center rounded-xl mx-auto mt-3"
+              >
+                <i class="fa-solid fa-brain text-accent"></i>
+                Neurology
+              </span>
+              <div class="border-b-[0.5px] w-[90%] mx-auto shadow-box">
+                <p class="text-text-main text-center mt-3 pb-2.5">
+                  Focuses on brain and nervous system disorders, offering expert
+                  diagnosis and treatment.
+                </p>
+              </div>
+              <div class="text-center mt-4">
+                <i
+                  class="fa-brands fa-linkedin-in text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-briefcase-medical text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-envelope text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+              </div>
+              <button
+                class="w-[80%] h-12.5 bg-button mb-3 mt-3 block mx-auto rounded-2xl transition-all duration-500 ease-in delay-200 hover:bg-button-hover text-text-main cursor-pointer"
+              >
+                <i class="fa-solid fa-calendar-days text-icon"></i>
+                book appointment
+              </button>
+            </div>
+
+            <div
+              class="w-70 overflow-hidden rounded-3xl bg-box border border-solid border-box-border"
+            >
+              <img
+                src="images/03_dr_daniel_brown.jpg"
+                alt="OUR DOCTORS PHOTO"
+              />
+              <h3 class="text-2xl text-center mt-2.5">Dr. Daniel Brown</h3>
+              <span
+                class="bg-primary text-accent w-35 block text-center rounded-xl mx-auto mt-3"
+              >
+                <i class="fa-solid fa-x-ray text-accent"></i>
+                Radiology
+              </span>
+              <div class="border-b-[0.5px] w-[85%] mx-auto shadow-box">
+                <p class="text-text-main text-center mt-3 pb-2.5">
+                  Specializes in medical imaging and diagnostic procedures using
+                  advanced technology.
+                </p>
+              </div>
+              <div class="text-center mt-4">
+                <i
+                  class="fa-brands fa-linkedin-in text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-briefcase-medical text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-envelope text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+              </div>
+              <button
+                class="w-[80%] h-12.5 bg-button mb-3 mt-3 block mx-auto rounded-2xl transition-all duration-500 ease-in delay-200 hover:bg-button-hover text-text-main cursor-pointer"
+              >
+                <i class="fa-solid fa-calendar-days text-icon"></i>
+                book appointment
+              </button>
+            </div>
+
+            <div
+              class="w-70 overflow-hidden rounded-3xl bg-box border border-solid border-box-border"
+            >
+              <img src="images/04_dr_emily_davis.jpg" alt="OUR DOCTORS PHOTO" />
+              <h3 class="text-2xl text-center mt-2.5">Dr. Emily Davis</h3>
+              <span
+                class="bg-primary text-accent w-35 block text-center rounded-xl mx-auto mt-3"
+              >
+                <i class="fa-solid fa-baby text-accent"></i>
+                Pediatrics
+              </span>
+              <div class="border-b-[0.5px] w-[75%] mx-auto shadow-box">
+                <p class="text-text-main text-center mt-3 pb-2.5">
+                  Provides compassionate healthcare for infants, children, and
+                  adolescents.
+                </p>
+              </div>
+              <div class="text-center mt-4">
+                <i
+                  class="fa-brands fa-linkedin-in text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-briefcase-medical text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+                <i
+                  class="fa-solid fa-envelope text-icon text-2xl mx-2 cursor-pointer"
+                ></i>
+              </div>
+              <button
+                class="w-[80%] h-12.5 bg-button mb-3 mt-3 block mx-auto rounded-2xl transition-all duration-500 ease-in delay-200 hover:bg-button-hover text-text-main cursor-pointer"
+              >
+                <i class="fa-solid fa-calendar-days text-icon"></i>
+                book appointment
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="w-screen h-screen bg-[url('../images/big-bg-image.png')] bg-fixed bg-cover bg-center bg-no-repeat bg-section"
+        id="about-us"
+      >
+        <div
+          class="w-full h-full bg-hero-overlay flex items-center justify-center"
+        >
+          <div class="max-w-125">
+            <h1 class="text-center text-3xl text-text-main">
+              Why Patients Choose MEDORA
+            </h1>
+            <p class="text-center mt-3 text-text-main">
+              We combine experienced professionals, modern technology, and
+              compassionate care to make your health our priority
+            </p>
+            <button
+              class="w-full h-12.5 mt-3 text-text-main bg-button transition-all duration-500 ease-in delay-200 hover:bg-button-hover rounded-2xl"
+            >
+              Discover More
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="bg-section">
+        <div class="container flex pt-10 max-md:block">
+          <div
+            class="w-1/2 flex items-center justify-center max-md:mx-auto max-md:mb-5"
+          >
+            <div class="max-w-125">
+              <h1 class="text-3xl text-text-main text-center">
+                We're Here To Help You
+              </h1>
+              <p class="text-text-main text-center mt-3">
+                Have questions or need assistance? Our team is ready to help you
+              </p>
+              <button
+                class="w-full h-12.5 mt-3 rounded-2xl text-text-main bg-button transition-all duration-500 ease-in delay-200 hover:bg-button-hover"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+          <div
+            class="w-1/2 flex items-center justify-center mb-10 max-md:mx-auto"
+          >
+            <img
+              src="images/07-hospital-lobby.jpg"
+              alt="#"
+              class="rounded-2xl max-w-76.5 h-110.5"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="bg-footer">
+      <div>
+        <div
+          class="container flex justify-between flex-wrap border-b border-text-secondary shadow-box pb-10"
+        >
+          <div class="mt-3">
+            <img
+              src="images/footer-logo.png"
+              alt="FOOTER LOGO"
+              class="w-100 h-30"
+            />
+            <p class="text-center text-text-secondary">
+              Better Care. Healthier Tomorrow.
+            </p>
+            <div class="w-full mt-8 text-center">
+              <a
+                href="#"
+                class="w-10 h-10 inline-flex justify-center items-center bg-bg-icon rounded-full mx-1.5"
+              >
+                <i
+                  class="fa fa-brands fa-facebook fa-solid fa-xl flex self-center text-icon"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 inline-flex justify-center items-center bg-bg-icon rounded-full mx-1.5"
+              >
+                <i
+                  class="fa-brands fa-x-twitter fa-solid fa-xl flex self-center text-icon"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 inline-flex justify-center items-center bg-bg-icon rounded-full mx-1.5"
+              >
+                <i
+                  class="fa fa-brands fa-instagram fa-solid fa-xl flex self-center text-icon"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 inline-flex justify-center items-center bg-bg-icon rounded-full mx-1.5"
+              >
+                <i
+                  class="fa fa-brands fa-linkedin fa-solid fa-xl flex self-center text-icon"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 inline-flex justify-center items-center bg-bg-icon rounded-full mx-1.5"
+              >
+                <i
+                  class="fa fa-brands fa-youtube fa-solid fa-xl flex self-center text-icon"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-2xl text-text-main">Quik Links</h3>
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="text-text-secondary inline-block mb-3 mt-3 hover:underline"
+                >
+                  <i class="fa fa-solid fa-chevron-right text-accent"></i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about-us"
+                  class="text-text-secondary inline-block mb-3 hover:underline"
+                >
+                  <i class="fa fa-solid fa-chevron-right text-accent"></i>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#our-services"
+                  class="text-text-secondary inline-block mb-3 hover:underline"
+                >
+                  <i class="fa fa-solid fa-chevron-right text-accent"></i>
+                  Our Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#our-doctors"
+                  class="text-text-secondary inline-block mb-3 hover:underline"
+                >
+                  <i class="fa fa-solid fa-chevron-right text-accent"></i>
+                  Our Doctors
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact-us"
+                  class="text-text-secondary inline-block hover:underline"
+                >
+                  <i class="fa fa-solid fa-chevron-right text-accent"></i>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-10 w-70" id="contact-us">
+            <h3 class="text-2xl text-text-main">Contact Us</h3>
+            <!-- Location -->
+            <p class="text-text-secondary flex items-center gap-2.5 mb-3 mt-3">
+              <i class="fa fa-solid fa-location-dot text-2xl text-accent"></i>
+              123 Health Csre Avenur, Medical City, MC 12345
+            </p>
+
+            <!-- Phone -->
+            <p class="text-text-secondary flex items-center gap-2.5 mb-3">
+              <i class="fa fa-solid fa-phone text-2xl text-accent"></i>
+              +1 (555) 123-4567
+            </p>
+            <!-- Email -->
+            <p class="text-text-secondary flex items-center gap-2.5">
+              <i class="fa fa-solid fa-envelope text-2xl text-accent"></i>
+              info@medora.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container flex justify-between flex-wrap py-10">
+        <p class="text-text-secondary">
+          &copy; 2025 MEDORA. All rights reserved.
+        </p>
+        <div class="border-l border-text-secondary pl-2">
+          <p class="text-text-secondary">Privacy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
